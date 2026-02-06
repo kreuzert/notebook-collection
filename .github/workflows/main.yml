@@ -6,6 +6,7 @@ on:
 jobs:
   papermill:
     runs-on: ubuntu-latest
+    environment: papermillactionenv
     steps:
       - name: Run Papermill via JupyterHub
         uses: kreuzert/papermillaction/.github/actions/run-papermill@main
@@ -13,4 +14,4 @@ jobs:
           repo: ${{ github.repository }}
           ref: ${{ github.ref_name }}
           notebook_dirs: '["notebooks", "examples"]'
-          token: ${{ secrets.JUPYTERHUB_TOKEN }}
+          token: ${{ secrets.JUPYTERHUB_API_TOKEN }}
