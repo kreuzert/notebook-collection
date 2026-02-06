@@ -1,0 +1,16 @@
+name: Run Papermill
+
+on:
+  workflow_dispatch:
+
+jobs:
+  papermill:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run Papermill via JupyterHub
+        uses: kreuzert/papermillaction/.github/actions/run-papermill@main
+        with:
+          repo: ${{ github.repository }}
+          ref: ${{ github.ref_name }}
+          notebook_dirs: '["notebooks", "examples"]'
+          token: ${{ secrets.JUPYTERHUB_TOKEN }}
