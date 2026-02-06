@@ -8,10 +8,11 @@ jobs:
     runs-on: ubuntu-latest
     environment: papermillactionenv
     steps:
-      - name: Run Papermill via JupyterHub
-        uses: kreuzert/papermillaction/.github/actions/run-papermill@main
+      - name: Run notebooks via papermill on JupyterHub
+        uses: kreuzert/papermillaction/.github/actions/notebooks@main
         with:
           repo: ${{ github.repository }}
           ref: ${{ github.ref_name }}
+          api_url: "https://jupyter-jsc-dev1.fz-juelich.de/hub/api/job"
           # notebook_dirs: '["notebooks", "examples"]'
           token: ${{ secrets.JUPYTERHUB_API_TOKEN }}
