@@ -13,5 +13,5 @@ jobs:
         with:
           repo: ${{ github.repository }}
           ref: ${{ github.ref_name }}
-          notebook_dirs: '["notebooks", "examples"]'
+          # notebook_dirs: '["notebooks", "examples"]'
           token: ${{ secrets.JUPYTERHUB_API_TOKEN }}
