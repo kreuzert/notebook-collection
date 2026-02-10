@@ -14,5 +14,6 @@ jobs:
           repo: ${{ github.repository }}
           ref: ${{ github.ref_name }}
           api_url: "https://jupyter-jsc-dev1.fz-juelich.de/hub/api/job"
+          user_options: '{"name": "GitHub Action"}'
           # notebook_dirs: '["notebooks", "examples"]'
           token: ${{ secrets.JUPYTERHUB_API_TOKEN }}
