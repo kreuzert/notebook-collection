@@ -9,7 +9,7 @@ jobs:
     environment: papermillactionenv
     steps:
       - name: Run notebooks via papermill on JupyterHub
-        uses: kreuzert/papermillaction/.github/actions/notebooks@main
+        uses: NFDI-Jupyter/ghactions/.github/actions/notebooks@main
         with:
           repo: ${{ github.repository }}
           ref: ${{ github.ref_name }}
